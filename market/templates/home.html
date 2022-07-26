@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block style %}
+<style>
+    body {
+      margin: 0;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>Upload new Logo</h1>
+    <div class="center">
+        <form method="POST" action="/home" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button>Submit</button> 
+        </form>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    Account Page
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>The Previous Images</h1>
+        {% for i in imagelist %}
+        <img src = "{{ url_for('get_img', id=i) }}" width="300" height="300">
+        {% endfor %}
+    </body>
+ {% endblock %}
